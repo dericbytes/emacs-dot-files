@@ -26,3 +26,5 @@
 (depends-on "web-mode")
 (depends-on "yasnippet")
 (depends-on "evil")
+(depends-on "moody")
+(depends-on "minions")

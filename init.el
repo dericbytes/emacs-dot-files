@@ -1,13 +1,16 @@
-(setq user-init-file "/home/dericbytes/wd/emacs-dot-files/init.el")
 (setq user-emacs-directory "/home/dericbytes/wd/emacs-dot-files/")
+(setq user-init-file (expand-file-name "/init.el" user-emacs-directory))
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-(add-to-list 'load-path "./settings")
+(add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "./settings/modules" user-emacs-directory))
 (require 'init-general)
 
 (evil-mode 1)
+
+(require 'mode-line-module)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
