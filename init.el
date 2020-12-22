@@ -8,9 +8,8 @@
 (add-to-list 'load-path (expand-file-name "./settings/modules" user-emacs-directory))
 (require 'init-general)
 
-(evil-mode 1)
-
 (require 'mode-line-module)
+(require 'evil-module)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
