@@ -1,0 +1,40 @@
+[user]
+name = dericbytes
+email = dericbytes@nowhere.com
+
+[push]
+default = matching
+
+
+[alias]
+g = git
+c = commit -m
+a = "!f(){ git add . && git status --porcelain; };f"
+cob = checkout -b
+up = !git fetch origin && git rebase origin/master
+ir = !git rebase -i origin/master
+done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
+b = branch -v
+s = status --porcelain
+unstage = reset HEAD --
+last = log -1 HEAD
+ac = git add . && git commit -m
+co = checkout
+alias = config --get-regexp ^alias\\.
+st = status
+logp = log --pretty=oneline -n 20 --graph
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat -n 10
+l = log --pretty=format:\"%Cblue%>(12)%ad %Creset%s\" --date=relative -n 12
+lol = log --pretty=oneline --abbrev-commit --graph --decorate
+lh = log --pretty=format:\"%C(black)%h %Cblue%>(12)%ad %Creset%s\" --date=relative -n 20
+lp = log --pretty=format:\"%Cblue%>(12)%ad %Creset%s\" --date=relative -n 20
+ r = reset
+r1 = reset HEAD^
+r2 = reset HEAD^^
+rh = reset --hard
+rh1 = reset HEAD^ --hard
+rh2 = reset HEAD^^ --hard 
+	logtree = log --graph --oneline --decorate --all
+        chs = "!f(){ git checkout \"$1\" && git status; };f"
+[core]
+	excludesfile = /home/dericbytes/.gitignore
