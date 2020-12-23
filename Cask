@@ -27,6 +27,7 @@
 (depends-on "yasnippet")
 (depends-on "moody")
 (depends-on "minions")
+(depends-on "general")
 
 (depends-on "evil")
 (depends-on "evil-escape")
