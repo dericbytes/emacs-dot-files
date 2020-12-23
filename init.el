@@ -11,6 +11,11 @@
 (require 'mode-line-module)
 (require 'evil-module)
 
+;; it is no secret emacs 
+(require 'epa-file)
+(epa-file-enable)
+(load (expand-file-name "secret.el.gpg" user-emacs-directory))
+;; (load "~/wd/emacs-dot-files/secret.el.gpg")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
