@@ -4,8 +4,6 @@
 
 (require 'moody)
 (setq x-underline-at-descent-line t)
-(moody-replace-mode-line-buffer-identification)
-(moody-replace-vc-mode)
 
 (setq moody-mode-line-height 30)
 
@@ -29,7 +27,6 @@
 
 
 ;;------------------------------------------------------------------
-
 
 (setq mode-line-format
 	      '("%e"
