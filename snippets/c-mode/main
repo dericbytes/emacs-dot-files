@@ -1,0 +1,12 @@
+# key: m
+# name: main
+# group-name: c-mode
+# --
+#include <stdio.h>
+
+int main() {
+
+   $0
+
+   return 0;
+}

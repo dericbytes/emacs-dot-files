@@ -1,0 +1,5 @@
+# key: pfs
+# name: c-printf-string
+# group-name: c-mode
+# --
+printf("$0");
