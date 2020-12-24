@@ -18,7 +18,6 @@
 (require 'overwrite-read-extended-command-change-Mx)
 (require 'figlet-utils)
 (require 'restart-emacs-utils)
-(require 'screencast-utils)
 
 ;; enable color emojis
 (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
