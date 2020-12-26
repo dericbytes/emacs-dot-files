@@ -26,6 +26,17 @@
   ;; Use them now.
   (set-window-buffer nil (current-buffer)))
 
+(defun set-mode-line-falla-conmigo ()
+  (cond
+    ((comint-check-proc (current-buffer))
+     (setq mode-line-format " Shell "))
+    ((eq major-mode 'dired-mode)
+     (setq mode-line-format " File Manager ")
+     (t
+      (setq mode-line-format " ")  ))))
+
+(add-hook 'after-change-major-mode-hook 'set-mode-line-falla-conmigo)
+
 
 (slides-start-show--falla-conmigo-pageN)
 
