@@ -21,6 +21,7 @@
 (setq evil-emacs-state-cursor '((bar . 3) "magenta")) 
 (setq evil-insert-state-cursor '((bar . 3) "magenta")) 
 
+
 (require 'init-evil-nerd-commenter)
 
 (provide 'evil-module)
