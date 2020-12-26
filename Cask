@@ -28,6 +28,7 @@
 (depends-on "moody")
 (depends-on "minions")
 (depends-on "general")
+(depends-on "window-numbering")
 
 (depends-on "evil")
 (depends-on "evil-escape")

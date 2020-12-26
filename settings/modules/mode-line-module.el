@@ -38,8 +38,6 @@
 		mode-line-frame-identification
 		moody-mode-line-buffer-identification
 		"   "
-		(:eval (format "NL%s" (ta-number-of-lines-mode)))
-		" "
 		mode-line-position
 		(vc-mode moody-vc-mode)
 		"  "

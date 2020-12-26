@@ -5,7 +5,6 @@
 (add-to-list 'load-path (expand-file-name "./settings/modules" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "./settings/packages" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "./settings/overwrite" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "./settings/utils" user-emacs-directory))
 
 (require 'init-general)
 
@@ -16,19 +15,24 @@
 (require 'evil-module)
 
 (require 'init-yasnippet)
-(require 'overwrite-read-extended-command-change-Mx)
-(require 'figlet-utils)
-(require 'restart-emacs-utils)
+(require 'window-module)
 
+(require 'overwrite-read-extended-command-change-Mx)
+(require 'stuff)
 ;; enable color emojis
 (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
+
+(add-to-list 'display-buffer-alist
+	     '("*shell*"
+	       (display-buffer-same-window)))
 
 ;; it is no secret emacs 
 (require 'epa-file)
 (epa-file-enable)
-(load (expand-file-name "secret.el.gpg" user-emacs-directory))
-;; (load "~/wd/emacs-dot-files/secret.el.gpg")
 
+(setq my-secret-file (expand-file-name "secret.el.gpg" user-emacs-directory))
+
+(add-hook 'emacs-startup-hook 'load-my-secret)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
