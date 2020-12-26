@@ -15,6 +15,7 @@
 (require 'evil-module)
 
 (require 'init-yasnippet)
+(require 'init-avy)
 (require 'window-module)
 
 (require 'overwrite-read-extended-command-change-Mx)

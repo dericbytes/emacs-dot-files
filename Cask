@@ -29,6 +29,7 @@
 (depends-on "minions")
 (depends-on "general")
 (depends-on "window-numbering")
+(depends-on "avy")
 
 (depends-on "evil")
 (depends-on "evil-escape")
