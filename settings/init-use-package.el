@@ -4,6 +4,8 @@
   (add-to-list 'load-path "<path where use-package is installed>")
   (require 'use-package))
 
+(use-package ace-window)
+
 (use-package yasnippet
     :config
   (setq yas-snippet-dirs (list

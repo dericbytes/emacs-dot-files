@@ -30,6 +30,8 @@
 (depends-on "general")
 (depends-on "window-numbering")
 (depends-on "avy")
+(depends-on "ace-window")
+(depends-on "ivy")
 
 (depends-on "evil")
 (depends-on "evil-escape")
