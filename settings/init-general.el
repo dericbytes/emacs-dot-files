@@ -1,4 +1,4 @@
-(set-face-background 'region "bisque")
+;; (set-face-background 'region "bisque")
 
 ;; set this in frame-properties - otherwise tool-bar-mode slows
 ;; startup by 1 sec

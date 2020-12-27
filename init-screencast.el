@@ -15,7 +15,11 @@
 (load-file (expand-file-name "init.el" user-emacs-directory))
 
 (add-to-list 'load-path "~/emacs-config/dem/utils-dem/")
+(add-to-list 'load-path "~/emacs-config/dem/libs-dem/")
 (require 'slide-show-dem)
+(require 'compilation-ovl-hide-mode)
+(compilation-ovl-hide)
+
 
 ;; allow long lines
 (toggle-truncate-lines 1)
@@ -31,12 +35,12 @@
     ((comint-check-proc (current-buffer))
      (setq mode-line-format " Shell "))
     ((eq major-mode 'dired-mode)
-     (setq mode-line-format " File Manager ")
-     (t
-      (setq mode-line-format " ")  ))))
+     (setq mode-line-format " File Manager "))
+    (t
+     (setq mode-line-format " ")  )))
 
 (add-hook 'after-change-major-mode-hook 'set-mode-line-falla-conmigo)
 
 
 (slides-start-show--falla-conmigo-pageN)
-
+(setq compile-command "")
