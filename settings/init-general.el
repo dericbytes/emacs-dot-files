@@ -1,5 +1,3 @@
-;; (set-face-background 'region "bisque")
-
 ;; set this in frame-properties - otherwise tool-bar-mode slows
 ;; startup by 1 sec
 (tool-bar-mode 0)
@@ -25,9 +23,9 @@
   (advice-add #'display-startup-echo-area-message :override #'ignore))
 
 (setq inhibit-default-init t)
-      ;; Shave seconds off startup time by starting the scratch buffer in
-      ;; `fundamental-mode', rather than, say, `org-mode' or `text-mode', which
-      ;; pull in a ton of packages.
+;; Shave seconds off startup time by starting the scratch buffer in
+;; `fundamental-mode', rather than, say, `org-mode' or `text-mode', which
+;; pull in a ton of packages.
 (setq initial-major-mode 'fundamental-mode)
 
 ;; Just say no to splash screens
@@ -35,9 +33,6 @@
 
 ;; and that scratch mesage
 (setq initial-scratch-message "")
-
-;; doesn't beep - desplays what is wrong in minibuffer
-(setq visible-bell t)
 
 ;; kill/copy/paste/yank
 ;; ~/emacs-config/dem/setup-dem/init-copy-and-paste.el
@@ -48,7 +43,6 @@
 
 ;; Silence ad-handle-definition about advised functions getting redefined.
 (setq ad-redefinition-action 'accept)
-
 
 ;; Send deleted files to windows recycle bin
 ;; (setq delete-by-moving-to-trash nil)
@@ -66,7 +60,6 @@
 ;; (put 'downcase-region 'disabled nil)
 
 (setq apropos-do-all t)
-
 
 ;; display filename on icon/tab when emacs is minimized
 (setq icon-title-format " ☣ Ed  %b")
