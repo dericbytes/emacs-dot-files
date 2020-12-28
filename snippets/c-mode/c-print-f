@@ -1,0 +1,4 @@
+# key: pf
+# name: c-print-f
+# --
+printf($0);
