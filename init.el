@@ -7,8 +7,8 @@
 
 (require 'init-general)
 (savehist-mode) ;; save command line history + more
-(recentf-mode)
-(global-auto-revert-mode t)
+(recentf-mode) 
+(global-auto-revert-mode t) ;; reload file if changed on disk 
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -20,6 +20,7 @@
 
 (require 'overwrite-read-extended-command-change-Mx)
 (require 'stuff)
+
 ;; enable color emojis
 (set-fontset-font t 'symbol "Noto Color Emoji" nil 'append)
 
