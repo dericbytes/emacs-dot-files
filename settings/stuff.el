@@ -72,9 +72,8 @@
 ;;- secrets
 ;;------------------------------------------------------------------
 (defun load-my-secret ()
-  (message "function load-my-secret ran.")
-
-  (load my-secret-file ))
+  (interactive)
+  (load my-secret-file))
 
 
 
