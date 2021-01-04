@@ -1,15 +1,15 @@
-;; This is only needed once, near the top of the file
 (eval-when-compile
-  ;; Following line is not needed if use-package.el is in ~/.emacs.d
-  (add-to-list 'load-path "<path where use-package is installed>")
   (require 'use-package))
 
 (use-package ace-window)
 
+(use-package yasnippet-snippets
+    :after yasnippet)
+
 (use-package yasnippet
     :config
-  (setq yas-snippet-dirs (list
-			  (expand-file-name "snippets" user-emacs-directory)))
+  (add-to-list 'yas-snippet-dirs 
+	       (expand-file-name "snippets" user-emacs-directory))
 
   (yas-global-mode 1)
   (define-key yas-keymap (kbd "M-d")
@@ -17,17 +17,10 @@
 
 (use-package avy
     :config
-  (setq avy-highlight-first t)
-  (setq avy-style 'at-full)
-  (setq avy-keys '(?a ?u ?i ?e ?y ?x ?o ?w ?b ?n ?f ?p ?k ?t ?s ?r ?q ?d ?l ?j ?m ?c ?g ?h
-		   ?, ?.  ?- ?[ ?] ?\? ?\
-		   ?2 ?3 ?4 ?5 ?6 ?7 ?8 ?9 ?0
-		   ))
-
-  (defun ta-avy-goto-end-of-line ()
-    "Call `avy-goto-char' with \"\n\" as argument."
-    (interactive)
-    (avy-goto-char ?\n)))
+  ;; (setq avy-highlight-first t)
+  (setq avy-style 'at)
+  ;; put easy to press keys first
+  (setq avy-keys (listify-key-sequence "jfkdlsaurieowqphgytmvcxz83429")))
 
 (use-package window-numbering
     :config
@@ -43,5 +36,13 @@
   (setq my-secret-file (expand-file-name "secret.el.gpg" user-emacs-directory))
 
   (add-hook 'emacs-startup-hook 'load-my-secret))
+
+
+(use-package flycheck
+    :config
+  (global-flycheck-mode t))
+
+
+(use-package notifications)
 
 (provide 'init-use-package)
